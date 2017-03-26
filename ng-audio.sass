@@ -1,0 +1,208 @@
+$color-1: #19B698
+$color-2: #c6bfc7
+
+.box-audio
+  min-width: 385px
+  max-width: 760px
+  width: 100%
+  padding: 5px
+  display: inline-block
+  line-height: 1
+  letter-spacing: 1px
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  *::selection
+    background: transparent
+  .player
+    width: 100%
+    padding: 15px
+    text-align: left
+    background-color: white
+    position: relative
+    border: 3px dashed $color-1
+    .player-btn
+      .fa
+        font-size: 50px
+        color: $color-1
+    .btn-volume
+      display: inline-block
+      position: absolute
+      right: 140px
+      top: 40px
+      .fa
+        font-size: 25px
+        color: $color-1
+    .silent-mode-btn
+      position: absolute
+    .duration
+      position: absolute
+      top: 15px
+      right: 15px
+      font-size: 18px
+      letter-spacing: 1px
+      color: $color-2
+      display: inline-block
+    .file-name
+      position: absolute
+      left: 75px
+      top: 20px
+      max-width: 460px
+      width: calc(100% - 285px)
+      height: 17px
+      overflow: hidden
+      text-overflow: ellipsis
+      font-size: 16px
+      color: #555555
+      &::selection
+        background: lightgray
+    form
+      margin: 0
+      padding: 0
+      display: block
+      position: absolute
+      left: 75px
+      top: 10px
+      width: calc(100% - 250px)
+      .file-name-input
+        border-radius: 100px
+        background-color: white
+        border: solid 1px $color-1
+        padding: 5px 10px
+        font-size: 16px
+        width: 100%
+        color: #555555
+        outline: none
+        display: inline-block
+        &::selection
+          background: lightgray
+
+    .rz-bar-wrapper
+      display: inline-block
+      cursor: pointer
+    .time-slider
+      left: 75px
+      width: calc(100% - 250px)
+      min-width: 100px
+      margin-right: 32px
+    .volume-slider
+      left: calc(100% - 130px)
+      width: 90px
+      .rz-selection, .rz-bar-wrapper
+        max-width: 90px
+    .volume-slider, .time-slider
+      min-width: 0 !important
+      position: absolute
+      .rz-bar-wrapper, .rz-bar
+        min-width: 0 !important
+      .rz-selection
+        background-color: $color-1 !important
+        visibility: visible !important
+      .rz-bubble
+        display: none
+
+  .action-edit
+    position: absolute
+    top: 13px
+    right: 120px
+    .fa
+      color: $color-2
+      font-size: 22px
+      margin: 0 3px
+      &:hover
+        color: $color-1
+  .delete-btn
+    position: absolute
+    top: -8px
+    right: -8px
+    font-size: 20px
+    color: $color-2
+    background-color: white
+    padding: 5px
+    border-radius: 100%
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1)
+    &:hover
+      color: $color-1
+  .btn-repeat
+    position: absolute
+    right: 15px
+    top: 43px
+    .fa
+      font-size: 20px
+  .fa
+    color: $color-2
+    font-size: 16px
+    &:hover
+      color: $color-1
+  .active
+    color: $color-1 !important
+  .upload
+    position: absolute
+    top: 15px
+    left: 80px
+    .fa
+      color: $color-1
+      font-size: 20px
+      &::before
+        font-size: 20px
+
+.sweet-alert
+  font-style: normal
+  font-stretch: normal
+  font-weight: normal
+  color: darkgrey
+  text-align: center
+  padding: 25px
+  width: 400px
+  margin-left: 0
+  left: calc(50vw - 200px)
+  word-wrap: break-word
+  @media (max-width: 400px)
+    width: 100vw
+    left: 0
+    right: 0
+    margin: 0
+    padding: 30px 15px
+  h2
+    font-size: 28px
+    font-weight: 500
+    line-height: 1.29
+    letter-spacing: 1.8px
+    margin-top: 10px
+  p
+    font-size: 16px
+    line-height: 1.5
+    letter-spacing: 1.5px
+
+  .sa-button-container
+    margin-top: 30px
+    .sa-confirm-button-container
+      float: right
+      .confirm
+        background-color: white !important
+        color: $color-1
+        border: 1px solid $color-1
+        &::before
+          content: "\f00c"
+        &:hover
+          background-color: $color-1 !important
+          color: white
+    .cancel, .confirm
+      border-radius: 100px
+      margin-top: 0
+      &::before
+        font-family: FontAwesome
+        margin-right: 10px
+        font-size: 14px
+        margin-left: -10px
+    .cancel
+      &::before
+        content: "\f00d"
+        font-size: 16px
+      border: 1px solid $color-2
+      color: $color-2
+      background-color: white
+      float: left
+      &:hover
+        background-color: $color-2
+        color: white
